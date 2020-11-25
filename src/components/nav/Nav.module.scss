@@ -1,0 +1,42 @@
+@import '../../assets/Sass/main.scss';
+
+.navBar {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    background-color: $color-pink;
+    color: $color-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 150px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2%;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin-bottom: 2%;
+
+        a {
+            text-decoration: inherit;
+            color: $color-blue;
+
+            &:hover {
+                color: darken($color: $color-blue, $amount: 20%);
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,119 @@
+@import '../../assets/Sass/main.scss';
+
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 1%;
+	background-color: lighten($color: $color-pink, $amount: 6%);
+	font-family: 'Montserrat', sans-serif;
+	height: 85vh;
+
+	h1 {
+		font-size: 40px;
+		padding-bottom: 2%;
+	}
+
+	.form_check {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		line-height: 2;
+
+		label {
+			display: flex;
+			cursor: pointer;
+			font-weight: 500;
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 0.375em;
+		
+			input {
+				position: absolute;
+				left: -9999px;
+				&:checked + span {
+					background-color: mix(#FFD7CB, $primary-color, 84%);
+					&:before {
+						box-shadow: inset 0 0 0 0.4375em $primary-color;
+					}
+				}
+			}
+			span {
+				display: flex;
+				align-items: center;
+				font-weight: 700;
+				letter-spacing: 1px;
+				padding: 0.375em 0.75em 0.375em 0.375em;
+				border-radius: 99em; 
+				transition: 0.25s ease;
+				&:hover {
+					background-color: mix(#FFD7CB, $primary-color, 84%);
+				}
+				&:before {
+					display: flex;
+					flex-shrink: 0;
+					content: "";
+					background-color: #fff;
+					width: 1.5em;
+					height: 1.5em;
+					border-radius: 50%;
+					margin-right: 0.375em;
+					transition: 0.25s ease;
+					box-shadow: inset 0 0 0 0.125em $primary-color;
+				}
+			}
+	
+		.buttonContainer {
+			display: flex;
+			justify-content: center;
+	
+			button {
+				color: $primary-color;
+				background: $color-blue;
+				margin: 40px;
+				padding: 12px 12px;
+				width: 250px;
+				font-size: 20px;
+				font-family: 'Montserrat', sans-serif;
+				cursor: pointer;
+				user-select: none;
+				transition: all 150ms linear;
+				text-align: center;
+				white-space: nowrap;
+				text-decoration: none !important;
+				text-transform: none;
+				border: 0 none;
+				border-radius: 36px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+		
+				&:hover {
+					transition: all 150ms linear;
+					opacity: .85;
+				}
+		
+				&:active {
+					transition: all 150ms linear;
+					opacity: .75;
+				}
+		
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		
+	}
+}
+
+
+
+
+
+
+}
+
