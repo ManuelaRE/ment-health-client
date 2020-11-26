@@ -2,11 +2,11 @@
 
 
 .form_container {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    padding: 1%;
+	padding: 1%;
 	background-color: lighten($color: $color-pink, $amount: 6%);
 	font-family: 'Montserrat', sans-serif;
 	height: 85vh;
@@ -30,33 +30,38 @@
 			position: relative;
 			overflow: hidden;
 			margin-bottom: 0.375em;
-		
+
 			input {
 				position: absolute;
 				left: -9999px;
-				&:checked + span {
-					background-color: mix(#FFD7CB, $primary-color, 84%);
+
+				&:checked+span {
+					background-color: mix($color-pink, $primary-color, 84%);
+
 					&:before {
 						box-shadow: inset 0 0 0 0.4375em $primary-color;
 					}
 				}
 			}
+
 			span {
 				display: flex;
 				align-items: center;
 				font-weight: 700;
 				letter-spacing: 1px;
 				padding: 0.375em 0.75em 0.375em 0.375em;
-				border-radius: 99em; 
+				border-radius: 99em;
 				transition: 0.25s ease;
+
 				&:hover {
-					background-color: mix(#FFD7CB, $primary-color, 84%);
+					background-color: mix($color-pink, $primary-color, 84%);
 				}
+
 				&:before {
 					display: flex;
 					flex-shrink: 0;
 					content: "";
-					background-color: #fff;
+					background-color: $color-pink;
 					width: 1.5em;
 					height: 1.5em;
 					border-radius: 50%;
@@ -65,11 +70,12 @@
 					box-shadow: inset 0 0 0 0.125em $primary-color;
 				}
 			}
-	
+		}
+
 		.buttonContainer {
 			display: flex;
 			justify-content: center;
-	
+
 			button {
 				color: $primary-color;
 				background: $color-blue;
@@ -90,30 +96,21 @@
 				-webkit-appearance: none;
 				-moz-appearance: none;
 				appearance: none;
-		
+
 				&:hover {
 					transition: all 150ms linear;
 					opacity: .85;
 				}
-		
+
 				&:active {
 					transition: all 150ms linear;
 					opacity: .75;
 				}
-		
+
 				&:focus {
 					outline: none;
 				}
 			}
 		}
-		
 	}
 }
-
-
-
-
-
-
-}
-

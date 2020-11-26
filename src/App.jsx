@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   const handleMoodFetch = () => {
-    fetch('http://localhost:8080/getMood')
+    fetch(process.env.REACT_APP_API_URL + '/getMood')
       .then((res) => {
         return res.json()
       }).then(res => {
@@ -44,13 +44,12 @@ function App() {
         "mood": select
       })
     }
-    fetch("http://localhost:8080/mood", fetchOptions)
+    fetch(process.env.REACT_APP_API_URL + "/mood", fetchOptions)
       .then(res => res.json())
       .then(res => {
-        console.log("I've send a new mood")
         // display the updates result
-        // console.log(res);
         handleMoodFetch();
+        alert("Mood logged to the Chart")
       })
   }
 
